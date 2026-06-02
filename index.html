@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonathan — linuxien-Software-dev</title>
+<meta name="description" content="Développeur Windows, mineur SHA-256, contributeur open source. Projets crypto, outils Python, Electron.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0b0d;--surface:#111318;--surface2:#181c24;
+  --accent:#00e5a0;--accent2:#00ccff;--text:#e8eaf0;--muted:#6b7280;
+  --border:#1e2330;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-height:100vh;overflow-x:hidden}
+
+/* HERO */
+.hero{padding:4rem 2rem 2.5rem;max-width:760px;margin:0 auto;position:relative}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.tag{font-family:'Space Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.15em;margin-bottom:1.2rem;display:flex;align-items:center;gap:10px}
+.tag::before,.tag::after{content:'';width:28px;height:1px;background:var(--accent)}
+h1{font-size:3rem;font-weight:800;line-height:1.05;margin-bottom:.5rem;letter-spacing:-.03em}
+h1 span{color:var(--accent)}
+.subtitle{font-family:'Space Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:2rem;letter-spacing:.1em}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.5rem}
+.badge{font-family:'Space Mono',monospace;font-size:10px;padding:5px 12px;border:1px solid var(--border);border-radius:3px;color:var(--muted);letter-spacing:.1em}
+.badge.hot{border-color:var(--accent);color:var(--accent)}
+
+/* SECTIONS */
+.section{max-width:760px;margin:0 auto;padding:0 2rem 2.5rem}
+.section-title{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.2em;margin-bottom:1.2rem;display:flex;align-items:center;gap:12px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:2rem}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.2rem;text-align:center}
+.stat-val{font-size:1.8rem;font-weight:800;color:var(--accent);line-height:1}
+.stat-label{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);margin-top:.4rem;letter-spacing:.1em}
+
+/* PROJETS */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:2rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.2rem;transition:border-color .2s,transform .2s;text-decoration:none;display:block}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card-icon{font-size:22px;margin-bottom:.8rem;color:var(--accent)}
+.card-title{font-size:14px;font-weight:700;margin-bottom:.4rem;color:var(--text)}
+.card-desc{font-size:11px;color:var(--muted);line-height:1.6;font-family:'Space Mono',monospace}
+.card-lang{margin-top:1rem;font-family:'Space Mono',monospace;font-size:10px;color:var(--accent2);letter-spacing:.05em}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:2rem}
+.skill{background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:.8rem 1rem;font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.skill i{color:var(--accent);font-size:16px}
+
+/* CONTACT */
+.contact{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2rem}
+.btn{font-family:'Space Mono',monospace;font-size:11px;padding:10px 18px;border-radius:4px;text-decoration:none;letter-spacing:.08em;transition:all .2s;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.btn-primary{background:var(--accent);color:#000;font-weight:700;border:none}
+.btn-primary:hover{background:#00ffb3}
+.btn-outline{border:1px solid var(--border);color:var(--muted);background:transparent}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* FOOTER */
+.footer{max-width:760px;margin:0 auto;padding:1.5rem 2rem;border-top:1px solid var(--border);font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:gap}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:6px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+  h1{font-size:2rem}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .footer{flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">PORTFOLIO</div>
+  <h1>Jonathan<br><span>Linuxien</span></h1>
+  <p class="subtitle">// WINDOWS DEV &nbsp;·&nbsp; SHA-256 MINER &nbsp;·&nbsp; OPEN SOURCE</p>
+  <div class="badges">
+    <span class="badge hot">SHA-256 MINING</span>
+    <span class="badge hot">PYTHON</span>
+    <span class="badge hot">ELECTRON</span>
+    <span class="badge">BITCOIN CORE</span>
+    <span class="badge">WINDOWS</span>
+    <span class="badge">CRYPTO OTC</span>
+    <span class="badge">DOCKER</span>
+    <span class="badge">n8n</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">STATS</div>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-val">27</div>
+      <div class="stat-label">TH/s HASHRATE</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">4+</div>
+      <div class="stat-label">PROJETS ACTIFS</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">FR</div>
+      <div class="stat-label">GIRONDE · FRANCE</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">PROJETS</div>
+  <div class="projects">
+
+    <a class="card" href="https://github.com/jonathan33370/ITC-desktop-GUI" target="_blank" rel="noopener">
+      <div class="card-icon"><i class="ti ti-cpu"></i></div>
+      <div class="card-title">ITC Desktop GUI</div>
+      <div class="card-desc">Wallet Electron pour Interchained (SHA-256). Fix Windows 10 écran noir — PR soumise sur le repo officiel.</div>
+      <div class="card-lang">ELECTRON · JS · PNPM</div>
+    </a>
+
+    <a class="card" href="https://github.com/jonathan33370" target="_blank" rel="noopener">
+      <div class="card-icon"><i class="ti ti-chart-line"></i></div>
+      <div class="card-title">ITC Richlist Scanner</div>
+      <div class="card-desc">Scanner UTXO complet de la blockchain SHA-256 via RPC. Classement holders avec cache incrémental.</div>
+      <div class="card-lang">PYTHON · RPC · JSON</div>
+    </a>
+
+    <a class="card" href="https://github.com/jonathan33370" target="_blank" rel="noopener">
+      <div class="card-icon"><i class="ti ti-building-store"></i></div>
+      <div class="card-title">CryptoEarlyOTC</div>
+      <div class="card-desc">Plateforme P2P OTC pour miners early-stage SHA-256. Scanner richlist QBX intégré.</div>
+      <div class="card-lang">PYTHON · BITCOIN RPC</div>
+    </a>
+
+    <a class="card" href="https://jonathan33370.github.io/diskcloner-site" target="_blank" rel="noopener">
+      <div class="card-icon"><i class="ti ti-device-floppy"></i></div>
+      <div class="card-title">DiskCloner</div>
+      <div class="card-desc">Outil de clonage disque Windows. Installateur NSIS, site vitrine GitHub Pages.</div>
+      <div class="card-lang">WINDOWS · NSIS · HTML</div>
+    </a>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">COMPÉTENCES</div>
+  <div class="skills">
+    <div class="skill"><i class="ti ti-brand-python"></i>Python</div>
+    <div class="skill"><i class="ti ti-terminal"></i>Bitcoin Core</div>
+    <div class="skill"><i class="ti ti-brand-javascript"></i>JavaScript</div>
+    <div class="skill"><i class="ti ti-brand-docker"></i>Docker</div>
+    <div class="skill"><i class="ti ti-server"></i>n8n / Ollama</div>
+    <div class="skill"><i class="ti ti-brand-windows"></i>Windows 10</div>
+    <div class="skill"><i class="ti ti-brand-ubuntu"></i>Linux / WSL2</div>
+    <div class="skill"><i class="ti ti-currency-bitcoin"></i>SHA-256 Mining</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">CONTACT</div>
+  <div class="contact">
+    <a class="btn btn-primary" href="https://github.com/jonathan33370" target="_blank" rel="noopener">
+      <i class="ti ti-brand-github"></i>GITHUB
+    </a>
+    <a class="btn btn-outline" href="https://t.me/CryptoEarlyOTC" target="_blank" rel="noopener">
+      <i class="ti ti-brand-telegram"></i>TELEGRAM
+    </a>
+    <a class="btn btn-outline" href="https://jonathan33370.github.io/diskcloner-site" target="_blank" rel="noopener">
+      <i class="ti ti-external-link"></i>DISKCLONER
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <span><span class="dot"></span>DISPONIBLE POUR COLLABORATIONS</span>
+  <span>jonathan33370 &nbsp;·&nbsp; 2026</span>
+</div>
+
+</body>
+</html>
